@@ -1,0 +1,383 @@
+.app {
+  width: calc(100% - 90px);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 45px 0 60px;
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.encabezado {
+  margin-bottom: 30px;
+}
+
+.encabezado h1 {
+  margin: 0;
+  color: #111c35;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.encabezado p {
+  margin: 7px 0 0;
+  color: #64748b;
+  font-size: 18px;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.formulario {
+  display: flex;
+  align-items: stretch;
+  gap: 15px;
+  margin-bottom: 42px;
+}
+
+.formulario input {
+  flex: 1;
+  height: 58px;
+  padding: 0 17px;
+
+  border: 1px solid #d5deea;
+  border-radius: 6px;
+
+  background: white;
+
+  color: #17233d;
+  font-size: 17px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.formulario input::placeholder {
+  color: #94a3b8;
+}
+
+.formulario input:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.boton {
+  border: none;
+  border-radius: 6px;
+
+  font-weight: 600;
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s,
+    opacity 0.15s,
+    box-shadow 0.15s;
+}
+
+.boton:hover {
+  transform: translateY(-1px);
+}
+
+.boton:active {
+  transform: translateY(0);
+}
+
+.boton-agregar {
+  min-width: 118px;
+  padding: 0 24px;
+
+  background: #1769f6;
+  color: white;
+
+  box-shadow:
+    0 3px 8px rgba(23, 105, 246, 0.18);
+}
+
+.boton-agregar:hover {
+  background: #0f5ee8;
+}
+
+.botones-edicion {
+  display: flex;
+  gap: 10px;
+}
+
+.boton-cancelar {
+  padding: 0 20px;
+
+  background: #64748b;
+  color: white;
+}
+
+/* =========================
+   SECCIÓN TAREAS
+========================= */
+
+.seccion-tareas h2 {
+  margin: 0 0 15px;
+
+  color: #111c35;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* =========================
+   TABLA
+========================= */
+
+.tabla-contenedor {
+  overflow-x: auto;
+
+  background: white;
+
+  border: 1px solid #dce4ef;
+  border-radius: 7px;
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+thead {
+  background: #f7f9fc;
+}
+
+th {
+  height: 57px;
+
+  padding: 0 25px;
+
+  color: #17233d;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-align: left;
+}
+
+td {
+  height: 78px;
+
+  padding: 0 25px;
+
+  border-top: 1px solid #e3e8f0;
+
+  color: #17233d;
+
+  font-size: 16px;
+
+  vertical-align: middle;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+  width: 80px;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 42%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 24%;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  width: 28%;
+}
+
+.numero {
+  font-weight: 600;
+}
+
+.titulo-tarea {
+  font-weight: 400;
+}
+
+.completada-texto {
+  color: #64748b;
+}
+
+/* =========================
+   ESTADOS
+========================= */
+
+.estado {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 7px 13px;
+
+  border: none;
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.estado-icono {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.estado-completada {
+  background: #d9f9e7;
+  color: #08783f;
+}
+
+.estado-completada .estado-icono {
+  background: #12944f;
+  color: white;
+}
+
+.estado-pendiente {
+  background: #edf1f6;
+  color: #41516c;
+}
+
+.estado-pendiente .estado-icono {
+  border: 2px solid #526581;
+}
+
+/* =========================
+   ACCIONES
+========================= */
+
+.acciones {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.boton-editar,
+.boton-eliminar {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  height: 46px;
+
+  padding: 0 18px;
+}
+
+.boton-editar {
+  min-width: 115px;
+
+  background: #1769f6;
+  color: white;
+
+  box-shadow:
+    0 2px 5px rgba(23, 105, 246, 0.15);
+}
+
+.boton-editar:hover {
+  background: #0f5ee8;
+}
+
+.boton-eliminar {
+  min-width: 125px;
+
+  background: #f02236;
+  color: white;
+
+  box-shadow:
+    0 2px 5px rgba(240, 34, 54, 0.15);
+}
+
+.boton-eliminar:hover {
+  background: #dc1e30;
+}
+
+/* =========================
+   CONTADOR
+========================= */
+
+.contador {
+  margin-top: 25px;
+
+  color: #64748b;
+
+  font-size: 16px;
+}
+
+.sin-tareas {
+  height: 120px;
+
+  text-align: center;
+
+  color: #64748b;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+  .app {
+    width: calc(100% - 30px);
+
+    padding-top: 30px;
+  }
+
+  .formulario {
+    flex-direction: column;
+  }
+
+  .boton-agregar {
+    height: 50px;
+  }
+
+  .botones-edicion {
+    width: 100%;
+  }
+
+  .botones-edicion button {
+    flex: 1;
+    height: 50px;
+  }
+
+  table {
+    min-width: 800px;
+  }
+}
